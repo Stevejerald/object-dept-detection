@@ -1,0 +1,30 @@
+# Core dependencies
+numpy>=1.21.0
+opencv-python>=4.5.0
+torch>=1.9.0
+torchvision>=0.10.0
+timm>=0.6.13  # For MiDaS model support
+
+# Web interface
+flask>=2.0.0
+flask-socketio>=5.1.0
+python-socketio>=5.4.0
+
+# Audio processing
+pygame>=2.1.0  # For audio alerts
+sounddevice>=0.4.4  # For real-time audio processing
+
+# Utilities
+pyyaml>=5.4.0  # For configuration files
+pillow>=8.3.0  # For image processing
+tqdm>=4.62.0  # For progress bars
+matplotlib>=3.4.0  # For visualization
+
+# Testing
+pytest>=6.2.0
+pytest-cov>=2.12.0
+
+# Development tools
+black>=21.6b0  # Code formatting
+isort>=5.9.0  # Import sorting
+flake8>=3.9.0  # Code linting 

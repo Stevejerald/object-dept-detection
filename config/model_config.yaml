@@ -1,0 +1,23 @@
+# Model Configuration
+
+model:
+  name: "MiDaS"  # Model name: MiDaS, FastDepth, or MonoDepth2
+  version: "DPT_Large"  # Model version/variant
+  weights_path: "../models/weights/midas_v3_dpt_large.pt"  # Path to model weights
+  device: "cuda"  # Device to run model on: "cuda" or "cpu"
+  input_size: [384, 384]  # Input resolution [height, width]
+
+preprocessing:
+  normalize_mean: [0.485, 0.456, 0.406]  # ImageNet mean
+  normalize_std: [0.229, 0.224, 0.225]   # ImageNet std
+  resize_mode: "bilinear"  # Interpolation mode for resizing
+
+postprocessing:
+  min_depth: 0.1  # Minimum depth value in meters
+  max_depth: 100.0  # Maximum depth value in meters
+  depth_scale: 1.0  # Scale factor for depth values
+
+thresholds:
+  safe_distance: 5.0    # Distance in meters for safe zone
+  warning_distance: 3.0  # Distance in meters for warning zone
+  danger_distance: 1.5  # Distance in meters for danger zone 

@@ -1,0 +1,43 @@
+# Application Configuration
+
+video:
+  input:
+    source: "data/videos/traffic.mp4"  # Path to input video file
+    fps: 30  # Target FPS for video processing
+    resize: [640, 480]  # Video resize resolution [width, height]
+  
+  processing:
+    buffer_size: 4  # Frame buffer size for processing
+    skip_frames: 0  # Number of frames to skip between processing
+    show_fps: true  # Display FPS counter
+
+web_interface:
+  host: "0.0.0.0"  # Host address for web server
+  port: 5000  # Port number
+  debug: true  # Debug mode
+  
+  display:
+    show_original: true  # Show original video feed
+    show_depth_map: true  # Show depth map visualization
+    show_alerts: true  # Show distance alerts
+    colormap: "plasma"  # Colormap for depth visualization
+
+alerts:
+  audio:
+    enabled: true  # Enable audio alerts
+    safe_sound: "static/audio/safe.wav"
+    warning_sound: "static/audio/warning.wav"
+    danger_sound: "static/audio/danger.wav"
+    volume: 0.5  # Audio volume (0.0 to 1.0)
+    
+  visual:
+    enabled: true  # Enable visual alerts
+    safe_color: [0, 255, 0]  # Green
+    warning_color: [255, 165, 0]  # Orange
+    danger_color: [255, 0, 0]  # Red
+    text_size: 1.0  # Text size scale factor
+    
+logging:
+  level: "INFO"  # Logging level: DEBUG, INFO, WARNING, ERROR
+  file: "logs/app.log"  # Log file path
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s" 
